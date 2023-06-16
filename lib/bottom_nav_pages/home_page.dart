@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
-class Load extends StatelessWidget {
+class HomePage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,77 +11,13 @@ class Load extends StatelessWidget {
           centerTitle: true ,
           backgroundColor: Colors.green[600],
         ),
-        body: Container(
-          color: Colors.blueGrey[100],
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    color: Colors.green,
-                  )
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    color: Colors.green,
-                  )
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    color: Colors.green,
-                  )
-                ],
-              ),
-
-
-            ],
-          ),
-
-        ),
-        bottomNavigationBar: Container(
-          color: Colors.green,
-          height: 50.0,
-          child:Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Icon(
-                Icons.ac_unit,
-                color: Colors.black,
-                size: 25.0,
-              ),
-              SizedBox(width: 10.0),
-              Icon(
-                Icons.accessibility_new,
-                color: Colors.black,
-                size: 25.0,
-              ),
-              SizedBox(width: 10.0),
-              Icon(
-                Icons.account_balance_outlined,
-                color: Colors.black,
-                size: 25.0,
-              ),
-              SizedBox(width: 10.0),
-              Icon(
-                Icons.access_alarm_rounded,
-                color: Colors.black,
-                size: 25.0,
-              ),
-
-            ],
+        body:Center(
+          child:  SizedBox(
+            child:  Text("Welcome",
+              style: TextStyle(color:Colors.black,fontSize: 25),),
           ),
         )
+
 
     );
   }

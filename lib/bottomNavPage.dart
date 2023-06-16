@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:new_app/bottom_nav_pages/notification_page.dart';
+import 'package:new_app/bottom_nav_pages/settings_page.dart';
 
-class bottomNavPage extends StatefulWidget {
-  const bottomNavPage({Key? key}) : super(key: key);
+import 'bottom_nav_pages/home_page.dart';
+import 'bottom_nav_pages/search_page.dart';
+
+class BottomNavPage extends StatefulWidget {
+  const BottomNavPage({Key? key}) : super(key: key);
 
   @override
-  State<bottomNavPage> createState() => _bottomNavPageState();
+  State<BottomNavPage> createState() => _bottomNavPageState();
 }
 
-class _bottomNavPageState extends State<bottomNavPage> {
+class _bottomNavPageState extends State<BottomNavPage> {
   int index = 0;
   List positions = ['home','search','notifications','settings'];
+  List pages = [HomePage(),const SearchPage(),const NotificationsPage(),const SettingsPage()];
   @override
   void initState() {
     super.initState();
@@ -22,16 +28,17 @@ class _bottomNavPageState extends State<bottomNavPage> {
         child: SizedBox(
           child: Text(
             positions[index],
-            style: TextStyle(color: Colors.black,fontSize: 20),
+            style: const TextStyle(color: Colors.black,fontSize: 20),
           ),
         ),
       ),
       bottomNavigationBar: Container(
         width: MediaQuery.of(context).size.width,
         height: 70,
-        margin: EdgeInsets.fromLTRB(20, 0, 20, 15),
+        margin: const EdgeInsets.fromLTRB(20, 0, 20, 15),
         decoration: BoxDecoration(
           color: Colors.limeAccent,
+          borderRadius: BorderRadius.circular(25),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
